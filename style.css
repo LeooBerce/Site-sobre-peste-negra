@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
+
+:root {
+    --parchment: #f5e8c7;
+    --ink: #3c2f2f;
+    --blood: #8b0000;
+    --gold: #d4af77;
+}
+
+body {
+    background: linear-gradient(180deg, #2c1810 0%, #1a0f08 100%);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(212, 175, 119, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(139, 0, 0, 0.15) 0%, transparent 50%);
+    font-family: 'Cinzel', serif;
+}
+
+/* Fontes Medievais */
+.medieval-header {
+    font-family: 'UnifrakturCook', cursive;
+    text-shadow: 3px 3px 0 #8b0000,
+                -2px -2px 0 #3c2f2f;
+}
+
+.parchment {
+    background: #f5e8c7;
+    background-image: 
+        linear-gradient(#d4af77 1px, transparent 1px),
+        linear-gradient(90deg, #d4af77 1px, transparent 1px);
+    background-size: 40px 40px;
+    box-shadow: 
+        0 0 0 8px #3c2f2f,
+        0 0 0 12px #d4af77,
+        25px 25px 0 -10px rgba(139, 0, 0, 0.3);
+    border: 12px solid #3c2f2f;
+}
+
+.section-header {
+    position: relative;
+}
+
+.section-header::before,
+.section-header::after {
+    content: "✠";
+    position: absolute;
+    color: #d4af77;
+    font-size: 2.5rem;
+    animation: pulse 3s infinite;
+}
+
+.section-header::before { left: -40px; }
+.section-header::after { right: -40px; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.old-text {
+    font-family: 'Cinzel', serif;
+    line-height: 1.8;
+}
+
+.scroll {
+    animation: scrollGlow 4s ease-in-out infinite;
+}
+
+@keyframes scrollGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.rat {
+    animation: ratRun 8s linear infinite;
+}
+
+@keyframes ratRun {
+    0% { transform: translateX(-50px); }
+    100% { transform: translateX(120vw); }
+}
+
+/* Melhorias visuais */
+a {
+    text-decoration: none;
+}
+
+button, a {
+    transition: all 0.3s ease;
+}
