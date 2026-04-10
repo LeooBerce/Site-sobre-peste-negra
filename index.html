@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Peste Negra - Uma experiência imersiva na maior pandemia da Idade Média">
-    <title>A Peste Negra • 1347-1351 • A Morte que Mudou o Mundo</title>
+    <meta name="description" content="A Peste Negra - Biologia Completa da Doença: Yersinia pestis, transmissão, sintomas, patogênese e controle">
+    <title>A Peste Negra • Biologia da Maior Pandemia da História</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50%' font-size='70' text-anchor='middle' fill='%238b0000'%3E☠️%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-    <!-- HEADER - Estilo pergaminho medieval -->
+    <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo">
@@ -18,69 +18,64 @@
             </div>
             <nav>
                 <a href="#hero" class="nav-link">Início</a>
-                <a href="#lugares" class="nav-link">Explorar Lugares</a>
-                <a href="#mapa" class="nav-link">Mapa da Morte</a>
-                <a href="#legado" class="nav-link">Legado</a>
+                <a href="#biologia" class="nav-link">Biologia da Doença</a>
+                <a href="#mapa" class="nav-link">Mapa da Propagação</a>
+                <a href="#legado" class="nav-link">Legado Biológico</a>
             </nav>
             <div class="era-badge">
-                1347 — 1351
+                1347 — 1351 • Yersinia pestis
             </div>
         </div>
     </header>
 
-    <!-- HERO - Vibe da época com pergaminho escuro -->
+    <!-- HERO -->
     <section id="hero">
         <div class="hero-overlay">
             <div class="hero-content">
                 <div class="seal">
-                    <span class="gothic">MORS</span>
+                    <span class="gothic">Y. PESTIS</span>
                     <span class="year">1347</span>
                 </div>
-                <h1 class="hero-title gothic-title">A GRANDE MORTALIDADE</h1>
-                <p class="hero-subtitle">A peste que devorou um terço da Europa.<br>Entre na escuridão da Idade Média.</p>
+                <h1 class="hero-title gothic-title">A BIOLOGIA DA PESTE NEGRA</h1>
+                <p class="hero-subtitle">Uma explicação detalhada e científica da doença que matou 25–50 milhões de pessoas.<br>Entenda a bactéria, a transmissão, os sintomas e por que ela foi tão mortal.</p>
                 <div class="hero-buttons">
-                    <a href="#lugares" class="btn-primary">Explorar os Lugares da Peste</a>
-                    <a href="#mapa" class="btn-secondary">Ver o Mapa da Propagação</a>
-                </div>
-                <div class="warning-scroll">
-                    <span>Role para descer ao abismo</span>
-                    <span class="arrow">↓</span>
+                    <a href="#biologia" class="btn-primary">Explorar a Biologia da Doença</a>
+                    <a href="#mapa" class="btn-secondary">Ver como a peste se espalhou</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTRO BREVE -->
+    <!-- INTRO BIOLÓGICA -->
     <section class="intro">
         <div class="container">
+            <h2 class="intro-title">O que foi a Peste Negra do ponto de vista da Biologia?</h2>
             <p class="intro-text">
-                Entre 1347 e 1351, a <strong>Peste Negra</strong> (causada pela bactéria <em>Yersinia pestis</em>) matou entre 25 e 50 milhões de pessoas na Europa — quase metade da população. 
-                Originada na Ásia, chegou pela Rota da Seda e pelos navios genoveses. Não foi apenas uma doença: foi o fim de uma era.
+                A Peste Negra foi uma pandemia causada pela bactéria <strong>Yersinia pestis</strong>, um bacilo gram-negativo da família Enterobacteriaceae. 
+                Entre 1347 e 1351, ela matou entre 30% e 60% da população europeia. Não foi uma doença qualquer: foi uma infecção zoonótica altamente letal, transmitida principalmente por pulgas de ratos negros (Rattus rattus). 
+                Hoje sabemos exatamente como a bactéria invade o corpo humano, bloqueia o sistema linfático e causa morte em poucos dias. Este site explica <strong>tudo</strong> com detalhes científicos e imagens reais da época.
             </p>
         </div>
     </section>
 
-    <!-- MAPA INTERATIVO SIMPLES (SVG) -->
+    <!-- MAPA -->
     <section id="mapa" class="map-section">
         <div class="container">
-            <h2 class="section-title gothic-title">O Rastro da Morte</h2>
+            <h2 class="section-title gothic-title">A Propagação Biológica da Peste</h2>
             <div class="map-container">
                 <svg width="100%" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-labelledby="map-title" role="img">
-                    <title id="map-title">Mapa da propagação da Peste Negra na Europa 1347-1351</title>
-                    <!-- Fundo pergaminho simples via CSS, mas SVG para pins clicáveis -->
+                    <title id="map-title">Propagação biológica da Yersinia pestis 1347-1351</title>
                     <rect width="800" height="500" fill="#f4e9d8" opacity="0.15"/>
-                    <!-- Europa estilizada (silhueta simples) -->
                     <path d="M150 150 Q200 100 300 120 Q380 80 450 140 Q520 100 620 180 Q700 160 750 220 Q720 320 650 380 Q550 420 400 400 Q300 450 200 380 Q120 300 150 150" fill="none" stroke="#8b0000" stroke-width="25" stroke-opacity="0.3"/>
-                    <!-- Pins clicáveis (lugares) -->
                     <g class="pin" data-id="1" onclick="showModal(1)">
                         <circle cx="220" cy="180" r="18" fill="#8b0000"/>
                         <text x="220" y="188" font-size="22" text-anchor="middle" fill="#f4e9d8">🇨🇳</text>
-                        <text x="220" y="215" font-size="14" text-anchor="middle" fill="#f4e9d8">Ásia</text>
+                        <text x="220" y="215" font-size="14" text-anchor="middle" fill="#f4e9d8">Origem</text>
                     </g>
                     <g class="pin" data-id="2" onclick="showModal(2)">
                         <circle cx="280" cy="220" r="18" fill="#8b0000"/>
                         <text x="280" y="228" font-size="22" text-anchor="middle" fill="#f4e9d8">🛡️</text>
-                        <text x="280" y="255" font-size="14" text-anchor="middle" fill="#f4e9d8">Crimeia</text>
+                        <text x="280" y="255" font-size="14" text-anchor="middle" fill="#f4e9d8">Caffa</text>
                     </g>
                     <g class="pin" data-id="3" onclick="showModal(3)">
                         <circle cx="380" cy="280" r="18" fill="#8b0000"/>
@@ -102,247 +97,227 @@
                         <text x="520" y="258" font-size="22" text-anchor="middle" fill="#f4e9d8">🏴󠁧󠁢󠁥󠁮󠁧󠁿</text>
                         <text x="520" y="285" font-size="14" text-anchor="middle" fill="#f4e9d8">Londres</text>
                     </g>
-                    <g class="pin" data-id="7" onclick="showModal(7)">
-                        <circle cx="580" cy="210" r="18" fill="#8b0000"/>
-                        <text x="580" y="218" font-size="22" text-anchor="middle" fill="#f4e9d8">⛪</text>
-                        <text x="580" y="245" font-size="14" text-anchor="middle" fill="#f4e9d8">Veneza</text>
-                    </g>
-                    <text x="400" y="480" font-size="18" text-anchor="middle" fill="#8b0000" font-style="italic">1347 — 1351 • Rota da Morte</text>
+                    <text x="400" y="480" font-size="18" text-anchor="middle" fill="#8b0000" font-style="italic">Rota biológica da Yersinia pestis</text>
                 </svg>
             </div>
-            <p class="map-caption">Clique nos pins para viajar no tempo e conhecer cada lugar</p>
         </div>
     </section>
 
-    <!-- LUGARES GRID -->
-    <section id="lugares" class="lugares-section">
+    <!-- BIOLOGIA - CARDS -->
+    <section id="biologia" class="lugares-section">
         <div class="container">
-            <h2 class="section-title gothic-title">Os Lugares da Peste</h2>
-            <p class="section-subtitle">Clique em cada cartão para ler a história completa com imagens e detalhes históricos</p>
+            <h2 class="section-title gothic-title">A Doença em Detalhes • Biologia Completa</h2>
+            <p class="section-subtitle">Clique em cada cartão para ler textos extensos, científicos e detalhados com imagens reais da época e explicações biológicas profundas</p>
             
             <div class="cards-grid">
-                <!-- Card 1 -->
                 <div class="card" data-id="1">
-                    <div class="card-image">🇨🇳</div>
+                    <div class="card-image">🦠</div>
                     <div class="card-content">
-                        <h3>Ásia Central</h3>
-                        <p class="card-year">~1330</p>
-                        <p class="card-desc">O berço da bactéria Yersinia pestis</p>
+                        <h3>Yersinia pestis</h3>
+                        <p class="card-year">A bactéria causadora</p>
+                        <p class="card-desc">Estrutura, ciclo de vida e adaptações que a tornam letal</p>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="card" data-id="2">
-                    <div class="card-image">🛡️</div>
+                    <div class="card-image">🐀</div>
                     <div class="card-content">
-                        <h3>Crimeia (Caffa)</h3>
-                        <p class="card-year">1346-1347</p>
-                        <p class="card-desc">O primeiro ataque biológico da história?</p>
+                        <h3>Transmissão e Vetores</h3>
+                        <p class="card-year">Pulgas e ratos</p>
+                        <p class="card-desc">Como a bactéria usa pulgas para infectar humanos</p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="card" data-id="3">
-                    <div class="card-image">🇮🇹</div>
-                    <div class="card-content">
-                        <h3>Messina, Sicília</h3>
-                        <p class="card-year">Outubro 1347</p>
-                        <p class="card-desc">A porta de entrada na Europa</p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card" data-id="4">
-                    <div class="card-image">🌹</div>
-                    <div class="card-content">
-                        <h3>Florença</h3>
-                        <p class="card-year">1348</p>
-                        <p class="card-desc">A cidade que inspirou o Decamerão</p>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card" data-id="5">
-                    <div class="card-image">🇫🇷</div>
-                    <div class="card-content">
-                        <h3>Paris</h3>
-                        <p class="card-year">1348-1349</p>
-                        <p class="card-desc">A peste chega ao coração da França</p>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="card" data-id="6">
-                    <div class="card-image">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-                    <div class="card-content">
-                        <h3>Londres</h3>
-                        <p class="card-year">1348-1349</p>
-                        <p class="card-desc">Covas em massa e pânico total</p>
-                    </div>
-                </div>
-
-                <!-- Card 7 - Veneza (quarentena) -->
-                <div class="card" data-id="7">
-                    <div class="card-image">⛪</div>
-                    <div class="card-content">
-                        <h3>Veneza</h3>
-                        <p class="card-year">1348</p>
-                        <p class="card-desc">Nasce a quarentena de 40 dias</p>
-                    </div>
-                </div>
-
-                <!-- Card 8 - Desafios & Erradicação -->
-                <div class="card" data-id="8">
                     <div class="card-image">🩸</div>
                     <div class="card-content">
-                        <h3>Desafios & Tentativas</h3>
-                        <p class="card-year">1347-1950s</p>
-                        <p class="card-desc">O que fizeram para combater a peste?</p>
+                        <h3>Formas Clínicas</h3>
+                        <p class="card-year">Bubônica, pneumônica e septicêmica</p>
+                        <p class="card-desc">Três formas mortais com mecanismos diferentes</p>
+                    </div>
+                </div>
+
+                <div class="card" data-id="4">
+                    <div class="card-image">🤢</div>
+                    <div class="card-content">
+                        <h3>Sintomas e Patogênese</h3>
+                        <p class="card-year">Do que o corpo humano sofre</p>
+                        <p class="card-desc">Como a bactéria destrói órgãos e o sistema imunológico</p>
+                    </div>
+                </div>
+
+                <div class="card" data-id="5">
+                    <div class="card-image">🌍</div>
+                    <div class="card-content">
+                        <h3>Origem e Propagação</h3>
+                        <p class="card-year">Da Ásia à Europa</p>
+                        <p class="card-desc">Fatores biológicos e ecológicos que permitiram a pandemia</p>
+                    </div>
+                </div>
+
+                <div class="card" data-id="6">
+                    <div class="card-image">⚰️</div>
+                    <div class="card-content">
+                        <h3>Desafios Biológicos da Época</h3>
+                        <p class="card-year">Por que ninguém conseguia parar a peste</p>
+                        <p class="card-desc">Falta de conhecimento científico e condições higiênicas</p>
+                    </div>
+                </div>
+
+                <div class="card" data-id="7">
+                    <div class="card-image">🛡️</div>
+                    <div class="card-content">
+                        <h3>Tentativas de Erradicação</h3>
+                        <p class="card-year">Médidas medievais vs. modernas</p>
+                        <p class="card-desc">Quarentena, flagelantes e o surgimento da saúde pública</p>
+                    </div>
+                </div>
+
+                <div class="card" data-id="8">
+                    <div class="card-image">🔬</div>
+                    <div class="card-content">
+                        <h3>Ciência Atual e Controle</h3>
+                        <p class="card-year">Descoberta e antibióticos</p>
+                        <p class="card-desc">Como a peste foi finalmente controlada e por que ainda existe</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LEGADO -->
+    <!-- LEGADO BIOLÓGICO -->
     <section id="legado" class="legado-section">
         <div class="container">
-            <h2 class="section-title gothic-title">O Legado da Peste Negra</h2>
+            <h2 class="section-title gothic-title">Legado Biológico da Peste Negra</h2>
             <div class="legado-grid">
                 <div class="legado-item">
-                    <h3>Fim do Feudalismo</h3>
-                    <p>Escassez de mão de obra → salários subiram e servos ganharam poder.</p>
+                    <h3>Seleção Natural</h3>
+                    <p>Sobreviventes possuíam variações genéticas que conferiam resistência — isso mudou o pool genético europeu.</p>
                 </div>
                 <div class="legado-item">
-                    <h3>Arte Macabra</h3>
-                    <p>Nasceu a “Dança da Morte” e o memento mori.</p>
+                    <h3>Avanço da Microbiologia</h3>
+                    <p>A peste motivou o estudo de bactérias e levou à descoberta da Yersinia pestis em 1894 por Yersin e Kitasato.</p>
                 </div>
                 <div class="legado-item">
-                    <h3>Ciência Moderna</h3>
-                    <p>A peste acelerou o Renascimento e o questionamento da Igreja.</p>
+                    <h3>Antibióticos e Saúde Pública</h3>
+                    <p>A quarentena de Veneza (40 dias) e o uso de antibióticos no século XX salvaram milhões de vidas.</p>
                 </div>
                 <div class="legado-item">
-                    <h3>Hoje</h3>
-                    <p>A bactéria ainda existe, mas é tratada com antibióticos desde 1940.</p>
+                    <h3>A Peste Ainda Existe</h3>
+                    <p>Em 2026, casos ainda ocorrem em Madagascar, EUA e Ásia — mas agora é tratável com estreptomicina e ciprofloxacino.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL ÚNICO (dinâmico) -->
+    <!-- MODAL -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">✕</button>
-            <div id="modal-body">
-                <!-- Conteúdo carregado via JavaScript -->
-            </div>
+            <div id="modal-body"></div>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>Site criado com rigor histórico • Temática 1347 • Para fins educativos</p>
-            <p>Fontes: relatos de Boccaccio, Gabriele de Mussis, crônicas medievais e estudos modernos da Yersinia pestis.</p>
-            <p>© 2026 • Hospede no GitHub Pages e entre na Idade Média.</p>
+            <p>Site educativo de Biologia • Peste Negra (Yersinia pestis) • Textos detalhados com base científica</p>
+            <p>Imagens históricas de domínio público (século XIV–XVII) • Fontes: CDC, WHO, relatos de Boccaccio e estudos modernos de microbiologia</p>
+            <p>© 2026 • Perfeito para trabalho escolar de Biologia • Hospede no GitHub Pages</p>
         </div>
     </footer>
 
     <script>
-        // Dados completos dos lugares (em português, profissional e detalhado)
         const lugaresData = {
             1: {
-                title: "Ásia Central — A Origem Misteriosa (~1330)",
+                title: "Yersinia pestis — A Bactéria Causadora da Peste Negra",
                 text: `
-                    <p><strong>Quando:</strong> Por volta de 1330 nas estepes da Ásia Central (atual Mongólia, China e Cazaquistão).</p>
-                    <p><strong>Onde:</strong> Regiões montanhosas e rotas da Seda.</p>
-                    <p>A bactéria <em>Yersinia pestis</em> vivia em roedores selvagens. Pulgas infectadas transmitiam a doença para humanos quando os ratos morriam. Guerras mongóis e comércio intensivo espalharam a peste para o oeste.</p>
-                    <p><strong>Primeiros sinais:</strong> Febre alta, bubões (ínchados dolorosos nas virilhas e axilas), tosse com sangue (forma pneumônica) e morte em poucos dias.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa da propagação da Peste Negra" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                    <p><strong>Curiosidade:</strong> A peste já existia em ondas desde o Império Romano, mas esta foi a mais devastadora.</p>
-                `,
-                images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png"]
+                    <p><strong>Descrição biológica completa:</strong> A <em>Yersinia pestis</em> é uma bactéria gram-negativa, em forma de bastonete curto (coccobacilo), pertencente à família Enterobacteriaceae. Descoberta em 1894 por Alexandre Yersin durante a peste de Hong Kong, ela é uma das bactérias mais virulentas conhecidas pelo homem.</p>
+                    <p><strong>Estrutura e adaptações:</strong> Possui uma cápsula de polissacarídeos (F1 antigen) que protege contra a fagocitose dos macrófagos do hospedeiro. Produz toxinas como a Yops (Yersinia outer proteins) que inibem a resposta imunológica. Em temperaturas baixas (como no intestino da pulga, ~25°C) forma um biofilme que bloqueia o proventrículo da pulga, forçando-a a regurgitar sangue infectado ao morder um novo hospedeiro.</p>
+                    <p><strong>Ciclo de vida:</strong> É uma zoonose. Vive naturalmente em roedores selvagens. Quando o roedor morre, as pulgas (Xenopsylla cheopis) migram para humanos ou ratos urbanos. A bactéria também sobrevive em solo úmido por meses.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Yersinia_pestis.jpg/800px-Yersinia_pestis.jpg" alt="Yersinia pestis ao microscópio" style="max-width:100%; border-radius:8px; margin:20px 0; box-shadow: 6px 6px 0 #3c2f2f;">
+                    <p><strong>Por que era tão mortal na Idade Média?</strong> Sem antibióticos, a taxa de letalidade da forma bubônica era de 60-80%. A forma pneumônica chegava a 95-100%.</p>
+                `
             },
             2: {
-                title: "Crimeia (Caffa) — 1346-1347",
+                title: "Transmissão e Vetores — Como a Peste se Espalhava",
                 text: `
-                    <p><strong>O ponto de partida para a Europa.</strong></p>
-                    <p>Exército mongol sitiou a colônia genovesa de Caffa. Segundo o cronista Gabriele de Mussis, os mongóis catapultaram cadáveres infectados por cima das muralhas — um dos primeiros relatos de guerra biológica.</p>
-                    <p>Os mercadores genoveses fugiram em navios para o Mediterrâneo, levando a morte consigo.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Flagelantes medievais" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                    <p><strong>Impacto imediato:</strong> Em poucas semanas, a peste já estava na Itália.</p>
-                `,
-                images: []
+                    <p><strong>Mecanismo biológico detalhado:</strong> A principal forma de transmissão é pela pulga do rato negro (<em>Xenopsylla cheopis</em>). Quando a pulga morde um roedor infectado, ingere a bactéria. No intestino da pulga, a <em>Y. pestis</em> se multiplica e forma um biofilme que bloqueia o trato digestivo. A pulga fica “com fome eterna” e morde repetidamente, regurgitando milhares de bactérias no sangue do novo hospedeiro.</p>
+                    <p><strong>Outras formas de transmissão:</strong></p>
+                    <ul>
+                        <li><strong>Forma pneumônica:</strong> transmissão direta pessoa a pessoa pelo ar (tosse com sangue infectado).</li>
+                        <li><strong>Septicêmica:</strong> bactéria entra diretamente na corrente sanguínea (raramente por mordida de animal infectado).</li>
+                        <li><strong>Contato com tecidos:</strong> manipulação de cadáveres ou peles infectadas.</li>
+                    </ul>
+                    <p>Na Idade Média, a alta densidade de ratos nas cidades (devido a falta de saneamento) e o comércio pela Rota da Seda aceleraram a transmissão. Imagens da época mostram ratos mortos nas ruas como sinal de peste iminente.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Cena medieval de peste com ratos" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             },
             3: {
-                title: "Messina, Sicília — Outubro de 1347",
+                title: "Formas Clínicas da Peste Negra",
                 text: `
-                    <p><strong>A chegada oficial à Europa.</strong></p>
-                    <p>Doze navios genoveses ancoraram no porto de Messina. A tripulação já estava morta ou agonizante. Em dias, a cidade inteira foi tomada pela peste.</p>
-                    <p>Os habitantes fugiram para o continente, espalhando a doença pela Itália e França.</p>
-                    <p><strong>Quando e onde:</strong> Primeira cidade europeia registrada com casos confirmados.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa da Peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                `,
-                images: []
+                    <p><strong>1. Peste Bubônica (mais comum — 80% dos casos):</strong> A bactéria entra pela picada da pulga e vai para os linfonodos. Formam-se “bubões” — ínchados dolorosos e negros nas virilhas, axilas e pescoço. Febre acima de 39°C, calafrios, fraqueza extrema. Sem tratamento, morte em 3–7 dias.</p>
+                    <p><strong>2. Peste Pneumônica (mais contagiosa e mortal):</strong> Afecta os pulmões. Tosse com sangue (hemoptise), dificuldade respiratória, morte em 24–48 horas. Transmissível pelo ar — a forma que mais aterrorizava as cidades.</p>
+                    <p><strong>3. Peste Septicêmica:</strong> A bactéria invade a corrente sanguínea diretamente. Causa coagulação intravascular disseminada (CID), gangrena nos dedos e nariz (“dedos negros”), choque séptico e morte em horas.</p>
+                    <p>Todas as formas eram confundidas na época como “morte negra” devido à necrose dos tecidos.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plague_doctor_%28color%29.jpg/800px-Plague_doctor_%28color%29.jpg" alt="Médico da peste com máscara" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             },
             4: {
-                title: "Florença, Itália — 1348",
+                title: "Sintomas e Patogênese — O que Acontece Dentro do Corpo",
                 text: `
-                    <p><strong>A cidade que Boccaccio imortalizou no “Decamerão”.</strong></p>
-                    <p>Perdeu cerca de 70% da população. Boccaccio descreveu ruas cheias de cadáveres, famílias inteiras mortas em casa e o colapso total da ordem social.</p>
-                    <p><strong>O que foi feito:</strong> Queimavam corpos, usavam máscaras de ervas (precursores dos médicos da peste) e orações em massa.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/The_Triumph_of_Death.jpg/800px-The_Triumph_of_Death.jpg" alt="Triunfo da Morte" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                    <p>A peste transformou Florença: o Renascimento nasceu do caos.</p>
-                `,
-                images: []
+                    <p><strong>Fase inicial (incubação 1–7 dias):</strong> A bactéria se multiplica nos linfonodos, liberando toxinas que causam febre alta, dor de cabeça, náuseas e prostração.</p>
+                    <p><strong>Patogênese detalhada:</strong> As proteínas Yops inibem a fagocitose. A cápsula F1 impede a ação dos neutrófilos. A bactéria se espalha pela linfa e sangue, causando inflamação massiva, necrose tecidual e falência múltipla de órgãos.</p>
+                    <p><strong>Sintomas visíveis (descritos em crônicas da época):</strong> Bubões que supuram sangue e pus, pele que fica negra por hemorragias subcutâneas, delírio, vômitos de sangue, odor fétido do corpo. A morte era frequentemente descrita como “o doente apodrecendo vivo”.</p>
+                    <p>Imagens históricas mostram pessoas com bubões enormes e corpos empilhados nas ruas.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/The_Triumph_of_Death.jpg/800px-The_Triumph_of_Death.jpg" alt="Triunfo da Morte - pintura medieval" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             },
             5: {
-                title: "Paris — 1348-1349",
+                title: "Origem e Propagação Biológica",
                 text: `
-                    <p><strong>A peste no coração da França.</strong></p>
-                    <p>A população caiu de 200 mil para menos de 50 mil habitantes. O rei Filipe VI fugiu da cidade. Covas coletivas foram abertas nos cemitérios.</p>
-                    <p><strong>Desafios:</strong> Fome, superstição e linchamentos de judeus (acusados de envenenar poços).</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plague_doctor_%28color%29.jpg/800px-Plague_doctor_%28color%29.jpg" alt="Médico da peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                `,
-                images: []
+                    <p><strong>Origem biológica:</strong> A bactéria surgiu há cerca de 5.000–7.000 anos na Ásia Central (estepes mongóis). Evoluiu de <em>Yersinia pseudotuberculosis</em>. A mutação que permitiu a transmissão por pulgas ocorreu por volta de 1340.</p>
+                    <p><strong>Fatores que permitiram a pandemia:</strong> Clima mais frio (Pequena Idade do Gelo) favoreceu a reprodução de pulgas. Comércio intenso pela Rota da Seda levou ratos infectados em navios. Em Caffa (1346), o cerco mongol catapultou cadáveres — primeiro relato de arma biológica.</p>
+                    <p>De Messina (outubro/1347) a peste chegou à Europa continental em semanas, matando 25–50 milhões de pessoas em 4 anos.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa detalhado da propagação" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             },
             6: {
-                title: "Londres — 1348-1349",
+                title: "Desafios Biológicos e Sociais na Idade Média",
                 text: `
-                    <p><strong>A morte chega à Inglaterra.</strong></p>
-                    <p>Enterros em massa no cemitério de Smithfield. A peste matou o arcebispo e metade do clero. A cidade parou completamente.</p>
-                    <p><strong>Impacto econômico:</strong> Falta de camponeses fez os senhores feudais perderem poder.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Flagelantes" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                `,
-                images: []
+                    <p><strong>Por que foi impossível controlar biologicamente:</strong></p>
+                    <ul>
+                        <li>Nenhum conhecimento de bactérias ou vírus (teoria dos miasmas — “ar ruim”).</li>
+                        <li>Higiene inexistente: ruas cheias de lixo e ratos.</li>
+                        <li>Sistema imunológico humano enfraquecido por fome e guerras constantes.</li>
+                        <li>Alta densidade populacional nas cidades medievais.</li>
+                    </ul>
+                    <p>As pessoas acreditavam que a peste era castigo divino, o que levou a procissões de flagelantes e perseguição a judeus (acusados de envenenar poços). Nada disso tinha efeito contra a bactéria.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Flagelantes medievais" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             },
             7: {
-                title: "Veneza — Berço da Quarentena (1348)",
+                title: "Tentativas de Erradicação na Época",
                 text: `
-                    <p><strong>O que foi feito para tentar erradicar a peste.</strong></p>
-                    <p>Veneza criou o primeiro sistema de quarentena do mundo: navios suspeitos ficavam isolados por 40 dias (“quarentena”).</p>
-                    <p>Instalaram hospitais flutuantes (lazaretos) e proibiram entrada de mercadorias infectadas. Não eliminou a peste, mas foi o início da saúde pública moderna.</p>
-                    <p><strong>Resultado:</strong> A peste retornou em ondas até o século XVIII, mas a quarentena salvou milhares.</p>
+                    <p><strong>Medidas medievais (ineficazes biologicamente):</strong></p>
+                    <ul>
+                        <li>Queima de roupas e corpos (reduzia pulgas indiretamente).</li>
+                        <li>Isolamento de doentes (precursores da quarentena).</li>
+                        <li>Máscaras com ervas aromáticas (médicos da peste) — tentavam filtrar “miasmas”.</li>
+                        <li>Quarentena de 40 dias em Veneza (1348) — a primeira do mundo e a mais eficaz.</li>
+                    </ul>
+                    <p>Nenhuma dessas medidas atacava a bactéria diretamente. A verdadeira redução só veio séculos depois com melhor saneamento e diminuição da população de ratos negros.</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plague_doctor_%28color%29.jpg/800px-Plague_doctor_%28color%29.jpg" alt="Médico da peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                `,
-                images: []
+                `
             },
             8: {
-                title: "Maiores Desafios e Tentativas de Erradicação",
+                title: "Ciência Atual: Descoberta, Tratamento e Controle",
                 text: `
-                    <h3>Os maiores desafios da época:</h3>
-                    <ul>
-                        <li>❌ Ignorância científica: acreditavam na “teoria dos miasmas” (ar ruim) e castigo divino.</li>
-                        <li>❌ Falta de higiene: ratos e pulgas por toda parte.</li>
-                        <li>❌ Perseguição: judeus foram massacrados em mais de 300 cidades.</li>
-                        <li>❌ Pânico: flagelantes se autoflagelavam em procissões.</li>
-                    </ul>
-                    <h3>O que realmente foi feito:</h3>
-                    <p>Sangrias, ervas, orações, isolamento de doentes, queima de roupas. Nada funcionava de verdade.</p>
-                    <p><strong>A verdadeira “erradicação”:</strong> A peste só diminuiu por mudanças climáticas, redução de ratos negros e evolução natural da bactéria. No século XX (1940s), a estreptomicina e outros antibióticos finalmente a tornaram tratável.</p>
-                    <p><strong>Hoje:</strong> A peste bubônica ainda existe em alguns países, mas é rara e curável se tratada rápido.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa" style="max-width:100%; border-radius:8px; margin:20px 0;">
-                `,
-                images: []
+                    <p><strong>Descoberta científica:</strong> Em 1894, Alexandre Yersin isolou a bactéria em Hong Kong. Em 1898, Paul-Louis Simond provou o papel da pulga na transmissão.</p>
+                    <p><strong>Tratamento moderno:</strong> Desde 1940, antibióticos como estreptomicina, gentamicina e tetraciclina reduzem a mortalidade para menos de 10% se iniciados nas primeiras 24 horas. Ciprofloxacino é usado em profilaxia.</p>
+                    <p><strong>Hoje:</strong> A peste ainda existe em roedores selvagens em 5 continentes. Em 2026, ocorrem cerca de 1.000–2.000 casos humanos por ano (principalmente em Madagascar e África). Vacinas experimentais existem, mas o controle é feito com vigilância epidemiológica e controle de roedores.</p>
+                    <p>A Peste Negra nos ensinou que a biologia e a saúde pública andam juntas.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Yersinia_pestis.jpg/800px-Yersinia_pestis.jpg" alt="Micrografia da Yersinia pestis" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `
             }
         };
 
@@ -365,13 +340,11 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Fecha modal clicando fora
         window.onclick = function(event) {
             const modal = document.getElementById('modal');
             if (event.target === modal) closeModal();
-        }
+        };
 
-        // Tecla ESC fecha modal
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") {
                 const modal = document.getElementById('modal');
@@ -379,7 +352,7 @@
             }
         });
 
-        console.log('%c✅ Site da Peste Negra carregado com sucesso! Temática medieval completa.', 'color:#8b0000; font-family:Georgia; font-size:14px;');
+        console.log('%c✅ Site de Biologia da Peste Negra carregado! Textos extensos e detalhados prontos.', 'color:#8b0000; font-family:Georgia; font-size:14px;');
     </script>
 </body>
 </html>
