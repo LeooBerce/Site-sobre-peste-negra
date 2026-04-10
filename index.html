@@ -3,134 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Peste Negra - A Grande Mortalidade (1347-1353)">
-    <title>✠ A Peste Negra ✠ • A Grande Mortalidade</title>
-    
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonte Medieval -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=UnifrakturCook:wght@700&amp;display=swap" rel="stylesheet">
-    
+    <meta name="description" content="A Peste Negra - Uma experiência imersiva na maior pandemia da Idade Média">
+    <title>A Peste Negra • 1347-1351 • A Morte que Mudou o Mundo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50%' font-size='70' text-anchor='middle' fill='%238b0000'%3E☠️%3C/text%3E%3C/svg%3E">
 </head>
-<body class="text-[#f5e8c7] min-h-screen">
-    <!-- HEADER -->
-    <header class="bg-[#3c2f2f] border-b-8 border-[#d4af77] sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-screen-2xl mx-auto px-8 py-6 flex items-center justify-between">
-            <div class="flex items-center gap-x-4">
-                <div class="w-14 h-14 bg-[#8b0000] rounded-full flex items-center justify-center border-4 border-[#d4af77] text-4xl rotate-12">☠️</div>
-                <div>
-                    <h1 class="medieval-header text-5xl tracking-widest">PESTE NEGRA</h1>
-                    <p class="text-[#d4af77] text-sm -mt-2 tracking-[4px] font-bold">ANNO DOMINI • 1347-1353</p>
-                </div>
+<body>
+    <!-- HEADER - Estilo pergaminho medieval -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="gothic">☠️</span>
+                <h1 class="gothic-title">PESTE NEGRA</h1>
             </div>
-            
-            <div class="text-center">
-                <div class="inline-flex items-center gap-x-3 bg-[#f5e8c7] text-[#3c2f2f] px-10 py-3 rounded-2xl border-4 border-[#8b0000] shadow-inner text-3xl font-bold medieval-header">
-                    A GRANDE MORTALIDADE
-                </div>
-                <p class="text-[#d4af77] text-xs mt-1 tracking-widest">“E a morte cavalgava um cavalo pálido...”</p>
-            </div>
-            
-            <nav class="flex items-center gap-x-8 text-lg">
-                <a href="#intro" class="hover:text-[#d4af77] transition-colors cursor-pointer flex items-center gap-x-2">✠ INTRO</a>
-                <a href="#origem" class="hover:text-[#d4af77] transition-colors cursor-pointer flex items-center gap-x-2">✠ ORIGEM</a>
-                <a href="#sintomas" class="hover:text-[#d4af77] transition-colors cursor-pointer flex items-center gap-x-2">✠ SINTOMAS</a>
-                <a href="#estatisticas" class="hover:text-[#d4af77] transition-colors cursor-pointer flex items-center gap-x-2">✠ ESTATÍSTICAS</a>
-                <a href="#desafios" class="hover:text-[#d4af77] transition-colors cursor-pointer flex items-center gap-x-2">✠ DESAFIOS</a>
-                <a href="#fim" class="bg-[#8b0000] text-white px-6 py-2 rounded-xl hover:bg-[#d4af77] hover:text-[#3c2f2f] transition-all">O FIM</a>
-                
-                <div onclick="tocarSino()" class="cursor-pointer w-10 h-10 bg-[#d4af77] hover:bg-[#f5e8c7] text-[#3c2f2f] rounded-full flex items-center justify-center text-3xl transition-all active:scale-95">🔔</div>
+            <nav>
+                <a href="#hero" class="nav-link">Início</a>
+                <a href="#lugares" class="nav-link">Explorar Lugares</a>
+                <a href="#mapa" class="nav-link">Mapa da Morte</a>
+                <a href="#legado" class="nav-link">Legado</a>
             </nav>
-        </div>
-        
-        <div class="bg-[#8b0000] text-center py-2 text-sm font-bold tracking-widest flex items-center justify-center gap-x-8">
-            <span class="rat">🐀</span>
-            <p>· ATENÇÃO, VIAJANTE · A PESTE CHEGOU AOS PORTOS · FICA EM CASA · QUARENTENA DE 40 DIAS ·</p>
-            <span class="rat">🐀</span>
+            <div class="era-badge">
+                1347 — 1351
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(at_center,#2c1810_40%,transparent)]"></div>
-        <div class="absolute inset-0 opacity-30 bg-cover bg-center" 
-             style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7d/Flagellants.jpg');"></div>
-        
-        <div class="relative z-10 text-center max-w-4xl px-8">
-            <div class="inline-flex items-center justify-center gap-x-4 mb-8 bg-[#3c2f2f]/80 backdrop-blur-md px-8 py-4 rounded-3xl border-4 border-[#d4af77]">
-                <span class="text-6xl">☠️</span>
-                <h1 class="medieval-header text-7xl md:text-8xl leading-none tracking-widest">A PESTE NEGRA</h1>
-                <span class="text-6xl">☠️</span>
-            </div>
-            
-            <p class="text-3xl md:text-4xl max-w-2xl mx-auto old-text mb-12">
-                “E em poucos dias a morte levava os fortes e os fracos, os ricos e os pobres, sem distinção...”
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#intro" 
-                   class="px-16 py-6 bg-[#f5e8c7] hover:bg-[#d4af77] text-[#3c2f2f] text-2xl font-bold rounded-2xl border-4 border-[#8b0000] transition-all active:scale-95 shadow-2xl inline-block text-center">
-                    LER A CRÔNICA
-                </a>
-                <button onclick="mostrarDecameron()" 
-                        class="px-10 py-6 border-4 border-[#d4af77] hover:bg-[#3c2f2f]/50 text-2xl font-bold rounded-2xl transition-all">
-                    📜 OUVIR BOCCACCIO
-                </button>
-            </div>
-            
-            <div class="mt-16 text-[#d4af77] text-sm flex items-center justify-center gap-x-2">
-                <div class="h-px w-12 bg-[#d4af77]"></div>
-                RECONSTRUÇÃO FIEL • COMO SE ESTIVESSE NO ANO DE 1350
-                <div class="h-px w-12 bg-[#d4af77]"></div>
+    <!-- HERO - Vibe da época com pergaminho escuro -->
+    <section id="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="seal">
+                    <span class="gothic">MORS</span>
+                    <span class="year">1347</span>
+                </div>
+                <h1 class="hero-title gothic-title">A GRANDE MORTALIDADE</h1>
+                <p class="hero-subtitle">A peste que devorou um terço da Europa.<br>Entre na escuridão da Idade Média.</p>
+                <div class="hero-buttons">
+                    <a href="#lugares" class="btn-primary">Explorar os Lugares da Peste</a>
+                    <a href="#mapa" class="btn-secondary">Ver o Mapa da Propagação</a>
+                </div>
+                <div class="warning-scroll">
+                    <span>Role para descer ao abismo</span>
+                    <span class="arrow">↓</span>
+                </div>
             </div>
         </div>
-        
-        <div class="absolute bottom-12 left-1/2 flex flex-col items-center">
-            <div class="text-[#d4af77] text-xs tracking-[6px] mb-2">ROLE PARA DESCOBRIR O HORROR</div>
-            <div class="scroll text-5xl animate-bounce">↓</div>
-        </div>
-        
-        <div class="absolute bottom-8 left-12 text-4xl opacity-40 rat">🐀</div>
-        <div class="absolute bottom-20 right-20 text-5xl opacity-30 rat" style="animation-delay: 3s;">🐀</div>
     </section>
 
-    <!-- O restante do conteúdo (Intro, Origem, Sintomas, etc.) -->
-    <!-- Copie e cole aqui todo o conteúdo das seções que eu te enviei na mensagem anterior -->
+    <!-- INTRO BREVE -->
+    <section class="intro">
+        <div class="container">
+            <p class="intro-text">
+                Entre 1347 e 1351, a <strong>Peste Negra</strong> (causada pela bactéria <em>Yersinia pestis</em>) matou entre 25 e 50 milhões de pessoas na Europa — quase metade da população. 
+                Originada na Ásia, chegou pela Rota da Seda e pelos navios genoveses. Não foi apenas uma doença: foi o fim de uma era.
+            </p>
+        </div>
+    </section>
 
-    <!-- Para não ficar muito longo aqui, vou te dar só o início e o final. 
-         Copie o conteúdo completo das seções da minha resposta anterior e cole entre o Hero e o Footer. -->
+    <!-- MAPA INTERATIVO SIMPLES (SVG) -->
+    <section id="mapa" class="map-section">
+        <div class="container">
+            <h2 class="section-title gothic-title">O Rastro da Morte</h2>
+            <div class="map-container">
+                <svg width="100%" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-labelledby="map-title" role="img">
+                    <title id="map-title">Mapa da propagação da Peste Negra na Europa 1347-1351</title>
+                    <!-- Fundo pergaminho simples via CSS, mas SVG para pins clicáveis -->
+                    <rect width="800" height="500" fill="#f4e9d8" opacity="0.15"/>
+                    <!-- Europa estilizada (silhueta simples) -->
+                    <path d="M150 150 Q200 100 300 120 Q380 80 450 140 Q520 100 620 180 Q700 160 750 220 Q720 320 650 380 Q550 420 400 400 Q300 450 200 380 Q120 300 150 150" fill="none" stroke="#8b0000" stroke-width="25" stroke-opacity="0.3"/>
+                    <!-- Pins clicáveis (lugares) -->
+                    <g class="pin" data-id="1" onclick="showModal(1)">
+                        <circle cx="220" cy="180" r="18" fill="#8b0000"/>
+                        <text x="220" y="188" font-size="22" text-anchor="middle" fill="#f4e9d8">🇨🇳</text>
+                        <text x="220" y="215" font-size="14" text-anchor="middle" fill="#f4e9d8">Ásia</text>
+                    </g>
+                    <g class="pin" data-id="2" onclick="showModal(2)">
+                        <circle cx="280" cy="220" r="18" fill="#8b0000"/>
+                        <text x="280" y="228" font-size="22" text-anchor="middle" fill="#f4e9d8">🛡️</text>
+                        <text x="280" y="255" font-size="14" text-anchor="middle" fill="#f4e9d8">Crimeia</text>
+                    </g>
+                    <g class="pin" data-id="3" onclick="showModal(3)">
+                        <circle cx="380" cy="280" r="18" fill="#8b0000"/>
+                        <text x="380" y="288" font-size="22" text-anchor="middle" fill="#f4e9d8">🇮🇹</text>
+                        <text x="380" y="315" font-size="14" text-anchor="middle" fill="#f4e9d8">Sicília</text>
+                    </g>
+                    <g class="pin" data-id="4" onclick="showModal(4)">
+                        <circle cx="420" cy="240" r="18" fill="#8b0000"/>
+                        <text x="420" y="248" font-size="22" text-anchor="middle" fill="#f4e9d8">🌹</text>
+                        <text x="420" y="275" font-size="14" text-anchor="middle" fill="#f4e9d8">Florença</text>
+                    </g>
+                    <g class="pin" data-id="5" onclick="showModal(5)">
+                        <circle cx="480" cy="190" r="18" fill="#8b0000"/>
+                        <text x="480" y="198" font-size="22" text-anchor="middle" fill="#f4e9d8">🇫🇷</text>
+                        <text x="480" y="225" font-size="14" text-anchor="middle" fill="#f4e9d8">Paris</text>
+                    </g>
+                    <g class="pin" data-id="6" onclick="showModal(6)">
+                        <circle cx="520" cy="250" r="18" fill="#8b0000"/>
+                        <text x="520" y="258" font-size="22" text-anchor="middle" fill="#f4e9d8">🏴󠁧󠁢󠁥󠁮󠁧󠁿</text>
+                        <text x="520" y="285" font-size="14" text-anchor="middle" fill="#f4e9d8">Londres</text>
+                    </g>
+                    <g class="pin" data-id="7" onclick="showModal(7)">
+                        <circle cx="580" cy="210" r="18" fill="#8b0000"/>
+                        <text x="580" y="218" font-size="22" text-anchor="middle" fill="#f4e9d8">⛪</text>
+                        <text x="580" y="245" font-size="14" text-anchor="middle" fill="#f4e9d8">Veneza</text>
+                    </g>
+                    <text x="400" y="480" font-size="18" text-anchor="middle" fill="#8b0000" font-style="italic">1347 — 1351 • Rota da Morte</text>
+                </svg>
+            </div>
+            <p class="map-caption">Clique nos pins para viajar no tempo e conhecer cada lugar</p>
+        </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#3c2f2f] py-12 border-t-8 border-[#d4af77]">
-        <div class="max-w-5xl mx-auto px-8 text-center text-[#d4af77] text-sm">
-            <p class="mb-6">Este site foi criado como uma crônica fiel da Peste Negra.<br>
-            Transporta-te para 1350 — mas com a verdade da história.</p>
-            <p class="text-xs">Feito com sangue, tinta e pergaminho digital • 2026</p>
-            <div class="flex justify-center gap-x-8 mt-8 text-xl">
-                <span>🐀</span>
-                <span>☠️</span>
-                <span>🪦</span>
-                <span>🔔</span>
-                <span>✠</span>
+    <!-- LUGARES GRID -->
+    <section id="lugares" class="lugares-section">
+        <div class="container">
+            <h2 class="section-title gothic-title">Os Lugares da Peste</h2>
+            <p class="section-subtitle">Clique em cada cartão para ler a história completa com imagens e detalhes históricos</p>
+            
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card" data-id="1">
+                    <div class="card-image">🇨🇳</div>
+                    <div class="card-content">
+                        <h3>Ásia Central</h3>
+                        <p class="card-year">~1330</p>
+                        <p class="card-desc">O berço da bactéria Yersinia pestis</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card" data-id="2">
+                    <div class="card-image">🛡️</div>
+                    <div class="card-content">
+                        <h3>Crimeia (Caffa)</h3>
+                        <p class="card-year">1346-1347</p>
+                        <p class="card-desc">O primeiro ataque biológico da história?</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card" data-id="3">
+                    <div class="card-image">🇮🇹</div>
+                    <div class="card-content">
+                        <h3>Messina, Sicília</h3>
+                        <p class="card-year">Outubro 1347</p>
+                        <p class="card-desc">A porta de entrada na Europa</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card" data-id="4">
+                    <div class="card-image">🌹</div>
+                    <div class="card-content">
+                        <h3>Florença</h3>
+                        <p class="card-year">1348</p>
+                        <p class="card-desc">A cidade que inspirou o Decamerão</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card" data-id="5">
+                    <div class="card-image">🇫🇷</div>
+                    <div class="card-content">
+                        <h3>Paris</h3>
+                        <p class="card-year">1348-1349</p>
+                        <p class="card-desc">A peste chega ao coração da França</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card" data-id="6">
+                    <div class="card-image">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+                    <div class="card-content">
+                        <h3>Londres</h3>
+                        <p class="card-year">1348-1349</p>
+                        <p class="card-desc">Covas em massa e pânico total</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 - Veneza (quarentena) -->
+                <div class="card" data-id="7">
+                    <div class="card-image">⛪</div>
+                    <div class="card-content">
+                        <h3>Veneza</h3>
+                        <p class="card-year">1348</p>
+                        <p class="card-desc">Nasce a quarentena de 40 dias</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 - Desafios & Erradicação -->
+                <div class="card" data-id="8">
+                    <div class="card-image">🩸</div>
+                    <div class="card-content">
+                        <h3>Desafios & Tentativas</h3>
+                        <p class="card-year">1347-1950s</p>
+                        <p class="card-desc">O que fizeram para combater a peste?</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- MODAL -->
-    <div id="modalDecameron" onclick="if(event.target.id === 'modalDecameron') fecharModal()" 
-         class="hidden fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
-        <div onclick="event.stopImmediatePropagation()" class="parchment max-w-2xl w-full mx-4 p-10 rounded-3xl">
-            <h2 class="text-4xl text-center mb-8">O Decameron • Giovanni Boccaccio</h2>
-            <p class="old-text text-[#3c2f2f] text-lg leading-relaxed">
-                "E assim, em meio à peste, dez jovens nobres fugiram para uma vila no campo e contaram histórias durante dez dias... para esquecer o horror que os cercava."
-            </p>
-            <p class="text-right text-sm mt-12 text-[#8b0000]">— 1348, Florença</p>
-            <button onclick="fecharModal()" 
-                    class="mt-10 w-full py-4 bg-[#8b0000] text-white font-bold rounded-2xl">VOLTAR À PESTE</button>
+    <!-- LEGADO -->
+    <section id="legado" class="legado-section">
+        <div class="container">
+            <h2 class="section-title gothic-title">O Legado da Peste Negra</h2>
+            <div class="legado-grid">
+                <div class="legado-item">
+                    <h3>Fim do Feudalismo</h3>
+                    <p>Escassez de mão de obra → salários subiram e servos ganharam poder.</p>
+                </div>
+                <div class="legado-item">
+                    <h3>Arte Macabra</h3>
+                    <p>Nasceu a “Dança da Morte” e o memento mori.</p>
+                </div>
+                <div class="legado-item">
+                    <h3>Ciência Moderna</h3>
+                    <p>A peste acelerou o Renascimento e o questionamento da Igreja.</p>
+                </div>
+                <div class="legado-item">
+                    <h3>Hoje</h3>
+                    <p>A bactéria ainda existe, mas é tratada com antibióticos desde 1940.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL ÚNICO (dinâmico) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modal-body">
+                <!-- Conteúdo carregado via JavaScript -->
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>Site criado com rigor histórico • Temática 1347 • Para fins educativos</p>
+            <p>Fontes: relatos de Boccaccio, Gabriele de Mussis, crônicas medievais e estudos modernos da Yersinia pestis.</p>
+            <p>© 2026 • Hospede no GitHub Pages e entre na Idade Média.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dados completos dos lugares (em português, profissional e detalhado)
+        const lugaresData = {
+            1: {
+                title: "Ásia Central — A Origem Misteriosa (~1330)",
+                text: `
+                    <p><strong>Quando:</strong> Por volta de 1330 nas estepes da Ásia Central (atual Mongólia, China e Cazaquistão).</p>
+                    <p><strong>Onde:</strong> Regiões montanhosas e rotas da Seda.</p>
+                    <p>A bactéria <em>Yersinia pestis</em> vivia em roedores selvagens. Pulgas infectadas transmitiam a doença para humanos quando os ratos morriam. Guerras mongóis e comércio intensivo espalharam a peste para o oeste.</p>
+                    <p><strong>Primeiros sinais:</strong> Febre alta, bubões (ínchados dolorosos nas virilhas e axilas), tosse com sangue (forma pneumônica) e morte em poucos dias.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa da propagação da Peste Negra" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                    <p><strong>Curiosidade:</strong> A peste já existia em ondas desde o Império Romano, mas esta foi a mais devastadora.</p>
+                `,
+                images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png"]
+            },
+            2: {
+                title: "Crimeia (Caffa) — 1346-1347",
+                text: `
+                    <p><strong>O ponto de partida para a Europa.</strong></p>
+                    <p>Exército mongol sitiou a colônia genovesa de Caffa. Segundo o cronista Gabriele de Mussis, os mongóis catapultaram cadáveres infectados por cima das muralhas — um dos primeiros relatos de guerra biológica.</p>
+                    <p>Os mercadores genoveses fugiram em navios para o Mediterrâneo, levando a morte consigo.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Flagelantes medievais" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                    <p><strong>Impacto imediato:</strong> Em poucas semanas, a peste já estava na Itália.</p>
+                `,
+                images: []
+            },
+            3: {
+                title: "Messina, Sicília — Outubro de 1347",
+                text: `
+                    <p><strong>A chegada oficial à Europa.</strong></p>
+                    <p>Doze navios genoveses ancoraram no porto de Messina. A tripulação já estava morta ou agonizante. Em dias, a cidade inteira foi tomada pela peste.</p>
+                    <p>Os habitantes fugiram para o continente, espalhando a doença pela Itália e França.</p>
+                    <p><strong>Quando e onde:</strong> Primeira cidade europeia registrada com casos confirmados.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa da Peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `,
+                images: []
+            },
+            4: {
+                title: "Florença, Itália — 1348",
+                text: `
+                    <p><strong>A cidade que Boccaccio imortalizou no “Decamerão”.</strong></p>
+                    <p>Perdeu cerca de 70% da população. Boccaccio descreveu ruas cheias de cadáveres, famílias inteiras mortas em casa e o colapso total da ordem social.</p>
+                    <p><strong>O que foi feito:</strong> Queimavam corpos, usavam máscaras de ervas (precursores dos médicos da peste) e orações em massa.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/The_Triumph_of_Death.jpg/800px-The_Triumph_of_Death.jpg" alt="Triunfo da Morte" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                    <p>A peste transformou Florença: o Renascimento nasceu do caos.</p>
+                `,
+                images: []
+            },
+            5: {
+                title: "Paris — 1348-1349",
+                text: `
+                    <p><strong>A peste no coração da França.</strong></p>
+                    <p>A população caiu de 200 mil para menos de 50 mil habitantes. O rei Filipe VI fugiu da cidade. Covas coletivas foram abertas nos cemitérios.</p>
+                    <p><strong>Desafios:</strong> Fome, superstição e linchamentos de judeus (acusados de envenenar poços).</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plague_doctor_%28color%29.jpg/800px-Plague_doctor_%28color%29.jpg" alt="Médico da peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `,
+                images: []
+            },
+            6: {
+                title: "Londres — 1348-1349",
+                text: `
+                    <p><strong>A morte chega à Inglaterra.</strong></p>
+                    <p>Enterros em massa no cemitério de Smithfield. A peste matou o arcebispo e metade do clero. A cidade parou completamente.</p>
+                    <p><strong>Impacto econômico:</strong> Falta de camponeses fez os senhores feudais perderem poder.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flagellants.jpg/800px-Flagellants.jpg" alt="Flagelantes" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `,
+                images: []
+            },
+            7: {
+                title: "Veneza — Berço da Quarentena (1348)",
+                text: `
+                    <p><strong>O que foi feito para tentar erradicar a peste.</strong></p>
+                    <p>Veneza criou o primeiro sistema de quarentena do mundo: navios suspeitos ficavam isolados por 40 dias (“quarentena”).</p>
+                    <p>Instalaram hospitais flutuantes (lazaretos) e proibiram entrada de mercadorias infectadas. Não eliminou a peste, mas foi o início da saúde pública moderna.</p>
+                    <p><strong>Resultado:</strong> A peste retornou em ondas até o século XVIII, mas a quarentena salvou milhares.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plague_doctor_%28color%29.jpg/800px-Plague_doctor_%28color%29.jpg" alt="Médico da peste" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `,
+                images: []
+            },
+            8: {
+                title: "Maiores Desafios e Tentativas de Erradicação",
+                text: `
+                    <h3>Os maiores desafios da época:</h3>
+                    <ul>
+                        <li>❌ Ignorância científica: acreditavam na “teoria dos miasmas” (ar ruim) e castigo divino.</li>
+                        <li>❌ Falta de higiene: ratos e pulgas por toda parte.</li>
+                        <li>❌ Perseguição: judeus foram massacrados em mais de 300 cidades.</li>
+                        <li>❌ Pânico: flagelantes se autoflagelavam em procissões.</li>
+                    </ul>
+                    <h3>O que realmente foi feito:</h3>
+                    <p>Sangrias, ervas, orações, isolamento de doentes, queima de roupas. Nada funcionava de verdade.</p>
+                    <p><strong>A verdadeira “erradicação”:</strong> A peste só diminuiu por mudanças climáticas, redução de ratos negros e evolução natural da bactéria. No século XX (1940s), a estreptomicina e outros antibióticos finalmente a tornaram tratável.</p>
+                    <p><strong>Hoje:</strong> A peste bubônica ainda existe em alguns países, mas é rara e curável se tratada rápido.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The_spread_of_the_Black_Death_in_Europe_1347-1351.svg/1024px-The_spread_of_the_Black_Death_in_Europe_1347-1351.svg.png" alt="Mapa" style="max-width:100%; border-radius:8px; margin:20px 0;">
+                `,
+                images: []
+            }
+        };
+
+        function showModal(id) {
+            const modal = document.getElementById('modal');
+            const body = document.getElementById('modal-body');
+            const data = lugaresData[id];
+            
+            body.innerHTML = `
+                <h2 class="modal-title gothic-title">${data.title}</h2>
+                <div class="modal-text">${data.text}</div>
+            `;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fecha modal clicando fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) closeModal();
+        }
+
+        // Tecla ESC fecha modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('modal');
+                if (modal.classList.contains('show')) closeModal();
+            }
+        });
+
+        console.log('%c✅ Site da Peste Negra carregado com sucesso! Temática medieval completa.', 'color:#8b0000; font-family:Georgia; font-size:14px;');
+    </script>
 </body>
 </html>
